@@ -60,6 +60,8 @@ install_{{ name }}_plugin:
     - source: {{ plugin.source }}
 {% if plugin.source_hash is defined %}
     - source_hash: {{ plugin.source_hash }}
+{% else %}
+    - skip_verify: True
 {% endif %}
     - user: {{ settings.user }}
     - group: {{ settings.group }}
