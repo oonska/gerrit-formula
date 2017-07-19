@@ -2,8 +2,5 @@
 Description={{service_name}}
 
 [Service]
-ExecStart={{directory}}/bin/gerrit.sh start
-ExecStop={{directory}}/bin/gerrit.sh stop
-PIDFile={{directory}}/logs/gerrit.pid
-Type=forking
+ExecStart={{directory}}/bin/gerrit.sh run
 User={{user}}
